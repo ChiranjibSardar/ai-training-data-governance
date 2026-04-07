@@ -3,15 +3,13 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: Working Draft](https://img.shields.io/badge/Status-Working%20Draft-orange.svg)]()
 
-> **Responsible Data Infrastructure (RDI) Framework** — A design-science framework for embedding governance into AI training data pipelines at the point of ingestion, not after the fact.
+> **Responsible Data Infrastructure (RDI) Framework**: A design-science framework for embedding governance into AI training data pipelines at the point of ingestion, not after the fact.
 
 ---
 
 ## The Problem
 
-Foundation models are statistical artifacts of their training corpora. Defects in data provenance, licensing, privacy, representational balance, quality, and adversarial integrity get absorbed into model parameters and reproduced across every downstream use. Yet the field's governance energy remains concentrated on post-training controls — alignment, red-teaming, evaluation benchmarks, and deployment guardrails.
-
-Training data governance is the most consequential and least-addressed gap in the AI safety lifecycle.
+Foundation models are statistical artifacts of their training corpora. Defects in data provenance, licensing, privacy, representational balance, quality, and adversarial integrity get absorbed into model parameters and reproduced across every downstream use. Yet the field's governance energy remains concentrated on post-training controls - alignment, red-teaming, evaluation benchmarks, and deployment guardrails. Training data governance is the most consequential and least-addressed gap in the AI safety lifecycle.
 
 ## What This Repo Contains
 
@@ -22,16 +20,21 @@ This repository hosts the **Responsible Data Infrastructure (RDI) Framework**, a
 | [`docs/framework-overview.md`](docs/framework-overview.md) | Full description of the four-layer RDI architecture |
 | [`docs/risk-taxonomy.md`](docs/risk-taxonomy.md) | Taxonomy of upstream risks: copyright, bias, poisoning, privacy, multimodal gaps |
 | [`docs/evaluation-checklist.md`](docs/evaluation-checklist.md) | Practical checklist for evaluating AI training data governance |
-| [`assets/`](assets/) | Architecture diagrams and visual assets |
-| [`paper/`](paper/) | Working paper (PDF) — draft, not for citation |
+| [`docs/requirements.md`](docs/requirements.md) | Requirements Document for the POC |
+| [`docs/design.md`](docs/design.md) | Design Document for the POC |
+| [`assets/governance-framework-diagram.svg`](assets/governance-framework-diagram.svg) | Architecture diagrams |
+| [`paper/`](paper/) | Working paper draft, not for citation |
+
 
 ## The RDI Framework at a Glance
 
 The framework organizes governance across **four sequential layers** of the training data lifecycle, with a cross-cutting risk overlay and a governance spine:
 
+![Architecture Diagram](assets/governance-framework-diagram.svg)
+
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│  ⚡ Cross-Cutting Risk Domains                                      │
+│  Cross-Cutting Risk Domains                                      │
 │  Copyright · Bias · Data Poisoning · Multimodal · Privacy · Regs   │
 └─────────────────────────────────────────────────────────────────────┘
 
@@ -42,12 +45,12 @@ The framework organizes governance across **four sequential layers** of the trai
   └──────────┘    └──────────┘    └──────────┘    └─────┬────┘
                                                         │
 ┌───────────────────────────────────────────────────────────────────┐
-│  🏛️ Governance Spine: Audit Trail · Policy-as-Code · Decision    │
+│  Governance Spine: Audit Trail · Policy-as-Code · Decision    │
 │     Support · Cross-Jurisdiction Map · Escalation · Compliance   │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
-### Layer 1 — Ingestion (Trust Entry Gate)
+### Layer 1: Ingestion (Trust Entry Gate)
 Gatekeeping layer where data first enters the pipeline. Enforces provenance validation, rights classification, and PII detection before any data reaches training infrastructure.
 
 - C2PA content credential validation
@@ -55,7 +58,7 @@ Gatekeeping layer where data first enters the pipeline. Enforces provenance vali
 - PII scanning and redaction
 - Provenance ledger with cryptographic audit trail
 
-### Layer 2 — Validation & Risk Scoring
+### Layer 2: Validation & Risk Scoring
 Scores incoming data across quality, safety, and representational dimensions. Introduces the **Cross-Modal Diversity Index (CMDI)** — a novel composite metric for measuring representational fairness across demographic, geographic, linguistic, and contextual dimensions of multimodal corpora.
 
 - ML quality scoring (coherence, factuality)
@@ -63,7 +66,7 @@ Scores incoming data across quality, safety, and representational dimensions. In
 - Toxicity filtering
 - Deduplication pipeline
 
-### Layer 3 — Curation & Decision Engine
+### Layer 3: Curation & Decision Engine
 The decision layer where governance controls determine what enters training and under what conditions. Threshold-based filtering with human-in-the-loop escalation for edge cases.
 
 - Threshold-based filtering engine
@@ -71,7 +74,7 @@ The decision layer where governance controls determine what enters training and 
 - Data versioning with immutable audit logs
 - Cross-jurisdictional compliance mapping (EU AI Act, NIST AI RMF, US Copyright)
 
-### Layer 4 — Monitoring & Feedback Loop
+### Layer 4: Monitoring & Feedback Loop
 Continuous post-curation monitoring with a feedback loop back to ingestion — critical for the design-science framing of governance as an iterative, self-correcting system.
 
 - Dataset composition drift detection
@@ -96,23 +99,23 @@ The RDI Framework is motivated by six critical gaps identified in the literature
 
 This work draws on and extends research across responsible AI governance, foundation-model transparency, dataset documentation, and adversarial robustness. Key influences include:
 
-- **NIST AI RMF** (2023) and **Generative AI Profile** (2024) — lifecycle risk management
-- **EU AI Act** (Regulation 2024/1689) — GPAI model obligations on training data
-- **Longpre et al.** (2024) — large-scale audits of dataset licensing, consent, and pretraining data effects
-- **Bommasani et al.** (2023, 2024) — Foundation Model Transparency Index
-- **Gebru et al.** (2021) — Datasheets for Datasets
-- **Bender & Friedman** (2018) — Data Statements for NLP
-- **OWASP** (2025) — LLM04:2025 Data and Model Poisoning
-- **U.S. Copyright Office** (2025) — Part III report on generative AI training
+- **NIST AI RMF** (2023) and **Generative AI Profile** (2024) - lifecycle risk management
+- **EU AI Act** (Regulation 2024/1689) - GPAI model obligations on training data
+- **Longpre et al.** (2024) - large-scale audits of dataset licensing, consent, and pretraining data effects
+- **Bommasani et al.** (2023, 2024) - Foundation Model Transparency Index
+- **Gebru et al.** (2021) - Datasheets for Datasets
+- **Bender & Friedman** (2018) - Data Statements for NLP
+- **OWASP** (2025) - LLM04:2025 Data and Model Poisoning
+- **U.S. Copyright Office** (2025) - Part III report on generative AI training
 
 See the [working paper](paper/) for the full literature review and citation list.
 
 
 ## Related Resources
 
-- 📄 **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft — not for citation)*
-- 📋 **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
-- ✍️ **Article**: [Coming soon on Substack/Medium](#) <!-- TODO: Replace with published URL -->
+- **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft - not for citation)*
+- **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
+- **Article**: [Coming soon on Substack/Medium](#) <!-- TODO: Replace with published URL -->
 
 ## Authors
 
