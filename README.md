@@ -118,7 +118,7 @@ See the [working paper](paper/) for the full literature review and citation list
 
 **Chiranjib Sardar**
 Senior Technical Program Manager, Amazon AGI
-[GitHub](https://github.com/ChiranjibSardar) · [LinkedIn](#) https://www.linkedin.com/in/chiranjibsardar/
+[GitHub](https://github.com/ChiranjibSardar) · [LinkedIn](https://www.linkedin.com/in/chiranjibsardar/) 
 
 
 
