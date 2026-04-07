@@ -3,7 +3,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: Working Draft](https://img.shields.io/badge/Status-Working%20Draft-orange.svg)]()
 
-> **Responsible Data Infrastructure (RDI) Framework** — A design-science framework for embedding governance into AI training data pipelines at the point of ingestion, not after the fact.
+> **Responsible Data Infrastructure (RDI) Framework*:* A design-science framework for embedding governance into AI training data pipelines at the point of ingestion, not after the fact.
 
 ---
 
@@ -110,15 +110,15 @@ See the [working paper](paper/) for the full literature review and citation list
 
 ## Related Resources
 
-- 📄 **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft — not for citation)*
-- 📋 **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
-- ✍️ **Article**: [Coming soon on Substack/Medium](#) <!-- TODO: Replace with published URL -->
+- **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft — not for citation)*
+- **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
+- **Article**: [Coming soon on Substack/Medium](#) <!-- TODO: Replace with published URL -->
 
 ## Authors
 
 **Chiranjib Sardar**
 Senior Technical Program Manager, Amazon AGI
-[GitHub](https://github.com/ChiranjibSardar) · [LinkedIn](#) <!-- TODO: Add LinkedIn URL -->
+[GitHub](https://github.com/ChiranjibSardar) · [LinkedIn](#) https://www.linkedin.com/in/chiranjibsardar/
 
 
 
