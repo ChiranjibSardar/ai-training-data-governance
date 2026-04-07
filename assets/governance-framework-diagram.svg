@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker>
+<marker id="arr-g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2E7D32"/></marker>
+<filter id="sh"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
+</defs>
+<!-- BG -->
+<rect width="1440" height="920" fill="#FAFBFC" rx="6"/>
+<!-- Title -->
+<text x="720" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1A237E">Responsible Data Infrastructure (RDI) Framework</text>
+<text x="720" y="58" text-anchor="middle" font-size="12" fill="#666">Four-Layer Governance Architecture for AI Training Data Pipelines</text>
+<!-- ===== CROSS-CUTTING RISKS TOP BAR ===== -->
+<rect x="55" y="75" width="1330" height="62" rx="8" fill="#FFF8E1" stroke="#F9A825" stroke-width="1.5" filter="url(#sh)"/>
+<text x="75" y="96" font-size="11" font-weight="bold" fill="#E65100">⚡ CROSS-CUTTING RISK DOMAINS</text>
+<rect x="75" y="104" width="165" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="157" y="122" text-anchor="middle" font-size="10" fill="#E65100">📜 Copyright &amp; Legality</text>
+<rect x="255" y="104" width="140" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="325" y="122" text-anchor="middle" font-size="10" fill="#E65100">⚖️ Bias &amp; Fairness</text>
+<rect x="410" y="104" width="145" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="482" y="122" text-anchor="middle" font-size="10" fill="#E65100">☠️ Data Poisoning</text>
+<rect x="570" y="104" width="160" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="650" y="122" text-anchor="middle" font-size="10" fill="#E65100">🔀 Multimodal Risks</text>
+<rect x="745" y="104" width="145" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="817" y="122" text-anchor="middle" font-size="10" fill="#E65100">🔒 Privacy &amp; PII</text>
+<rect x="905" y="104" width="195" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="1002" y="122" text-anchor="middle" font-size="10" fill="#E65100">🌐 Regulatory Fragmentation</text>
+<rect x="1115" y="104" width="175" height="26" rx="13" fill="#FFECB3" stroke="#FFA000" stroke-width="1"/><text x="1202" y="122" text-anchor="middle" font-size="10" fill="#E65100">🛡️ Adversarial Integrity</text>
+<!-- ===== DATA SOURCES (Left) ===== -->
+<rect x="55" y="290" width="110" height="210" rx="10" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.5" filter="url(#sh)"/>
+<text x="110" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#37474F">DATA</text>
+<text x="110" y="356" text-anchor="middle" font-size="12" font-weight="bold" fill="#37474F">SOURCES</text>
+<line x1="75" y1="368" x2="145" y2="368" stroke="#B0BEC5" stroke-width="1"/>
+<text x="110" y="388" text-anchor="middle" font-size="10" fill="#546E7A">Web Crawls</text>
+<text x="110" y="404" text-anchor="middle" font-size="10" fill="#546E7A">Licensed Data</text>
+<text x="110" y="420" text-anchor="middle" font-size="10" fill="#546E7A">Partnerships</text>
+<text x="110" y="436" text-anchor="middle" font-size="10" fill="#546E7A">User Content</text>
+<text x="110" y="452" text-anchor="middle" font-size="10" fill="#546E7A">Multimodal</text>
+<text x="110" y="468" text-anchor="middle" font-size="10" fill="#546E7A">Assets</text>
+<!-- Arrow Sources → L1 -->
+<line x1="165" y1="395" x2="195" y2="395" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+<!-- ===== LAYER 1: INGESTION ===== -->
+<rect x="200" y="155" width="260" height="420" rx="12" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#sh)"/>
+<rect x="200" y="155" width="260" height="50" rx="12" fill="#1565C0"/>
+<rect x="200" y="185" width="260" height="20" fill="#1565C0"/>
+<text x="330" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🔵 LAYER 1 — INGESTION</text>
+<text x="330" y="198" text-anchor="middle" font-size="10" fill="#BBDEFB">🛡️ Trust Entry Gate</text>
+<!-- Tech components -->
+<text x="220" y="228" font-size="9" font-weight="bold" fill="#1565C0">TECHNICAL COMPONENTS</text>
+<rect x="215" y="236" width="230" height="26" rx="5" fill="white" stroke="#42A5F5" stroke-width="1"/><text x="330" y="254" text-anchor="middle" font-size="10" fill="#1565C0">🔍 Web Crawlers + robots.txt</text>
+<rect x="215" y="268" width="230" height="26" rx="5" fill="white" stroke="#42A5F5" stroke-width="1"/><text x="330" y="286" text-anchor="middle" font-size="10" fill="#1565C0">🔐 C2PA Content Credentials</text>
+<rect x="215" y="300" width="230" height="26" rx="5" fill="white" stroke="#42A5F5" stroke-width="1"/><text x="330" y="318" text-anchor="middle" font-size="10" fill="#1565C0">📋 License Classification ML</text>
+<rect x="215" y="332" width="230" height="26" rx="5" fill="white" stroke="#42A5F5" stroke-width="1"/><text x="330" y="350" text-anchor="middle" font-size="10" fill="#1565C0">🔒 PII Scanner</text>
+<!-- Governance -->
+<text x="220" y="378" font-size="9" font-weight="bold" fill="#283593">GOVERNANCE CONTROLS</text>
+<rect x="215" y="386" width="230" height="24" rx="5" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="1" stroke-dasharray="4,2"/><text x="330" y="403" text-anchor="middle" font-size="10" fill="#283593">Rights Acquisition Policy</text>
+<rect x="215" y="414" width="230" height="24" rx="5" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="1" stroke-dasharray="4,2"/><text x="330" y="431" text-anchor="middle" font-size="10" fill="#283593">Provenance Ledger</text>
+<rect x="215" y="442" width="230" height="24" rx="5" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="1" stroke-dasharray="4,2"/><text x="330" y="459" text-anchor="middle" font-size="10" fill="#283593">Legal Review Gate</text>
+<!-- Metrics -->
+<text x="220" y="488" font-size="8" fill="#1565C0">📊 % Validated Provenance · Copyright Clearance</text>
+<text x="220" y="500" font-size="8" fill="#1565C0">    Rate · PII Detection Precision/Recall</text>
+<!-- Reject arrow down -->
+<line x1="330" y1="575" x2="330" y2="610" stroke="#D32F2F" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="345" y="598" font-size="8" fill="#D32F2F">reject</text>
+<!-- Arrow L1 → L2 -->
+<line x1="460" y1="365" x2="495" y2="365" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="477" y="356" text-anchor="middle" font-size="9" fill="#555">pass</text>
+<!-- ===== LAYER 2: VALIDATION ===== -->
+<rect x="500" y="155" width="260" height="420" rx="12" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" filter="url(#sh)"/>
+<rect x="500" y="155" width="260" height="50" rx="12" fill="#7B1FA2"/>
+<rect x="500" y="185" width="260" height="20" fill="#7B1FA2"/>
+<text x="630" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🟣 LAYER 2 — VALIDATION</text>
+<text x="630" y="198" text-anchor="middle" font-size="10" fill="#E1BEE7">📊 Validation &amp; Risk Scoring</text>
+<!-- Tech -->
+<text x="520" y="228" font-size="9" font-weight="bold" fill="#7B1FA2">TECHNICAL COMPONENTS</text>
+<rect x="515" y="236" width="230" height="26" rx="5" fill="white" stroke="#AB47BC" stroke-width="1"/><text x="630" y="254" text-anchor="middle" font-size="10" fill="#7B1FA2">🎯 ML Quality Scoring</text>
+<rect x="515" y="268" width="230" height="26" rx="5" fill="white" stroke="#AB47BC" stroke-width="1"/><text x="630" y="286" text-anchor="middle" font-size="10" fill="#7B1FA2">⚖️ Multimodal Bias Detection</text>
+<rect x="515" y="300" width="230" height="26" rx="5" fill="white" stroke="#AB47BC" stroke-width="1"/><text x="630" y="318" text-anchor="middle" font-size="10" fill="#7B1FA2">🧹 Deduplication Pipeline</text>
+<rect x="515" y="332" width="230" height="26" rx="5" fill="white" stroke="#AB47BC" stroke-width="1"/><text x="630" y="350" text-anchor="middle" font-size="10" fill="#7B1FA2">☣️ Toxicity + Factuality Check</text>
+<rect x="515" y="364" width="230" height="26" rx="5" fill="#F3E5F5" stroke="#E040FB" stroke-width="1.5"/><text x="630" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="#6A1B9A">⭐ CMDI — Cross-Modal Diversity</text>
+<!-- Governance -->
+<text x="520" y="412" font-size="9" font-weight="bold" fill="#4A148C">GOVERNANCE CONTROLS</text>
+<rect x="515" y="420" width="230" height="24" rx="5" fill="#EDE7F6" stroke="#7E57C2" stroke-width="1" stroke-dasharray="4,2"/><text x="630" y="437" text-anchor="middle" font-size="10" fill="#4A148C">Quality SLA Thresholds</text>
+<rect x="515" y="448" width="230" height="24" rx="5" fill="#EDE7F6" stroke="#7E57C2" stroke-width="1" stroke-dasharray="4,2"/><text x="630" y="465" text-anchor="middle" font-size="10" fill="#4A148C">Bias Audit Reports</text>
+<rect x="515" y="476" width="230" height="24" rx="5" fill="#EDE7F6" stroke="#7E57C2" stroke-width="1" stroke-dasharray="4,2"/><text x="630" y="493" text-anchor="middle" font-size="10" fill="#4A148C">Red-Team Dataset Review</text>
+<!-- Metrics -->
+<text x="520" y="522" font-size="8" fill="#7B1FA2">📊 Quality Pass Rate · Toxicity Flag Rate</text>
+<text x="520" y="534" font-size="8" fill="#7B1FA2">    Diversity Index · Duplicate Ratio</text>
+<!-- Arrow L2 → L3 -->
+<line x1="760" y1="365" x2="795" y2="365" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="777" y="356" text-anchor="middle" font-size="9" fill="#555">scored</text>
+<!-- ===== LAYER 3: CURATION ===== -->
+<rect x="800" y="155" width="260" height="420" rx="12" fill="#FFF3E0" stroke="#E65100" stroke-width="2" filter="url(#sh)"/>
+<rect x="800" y="155" width="260" height="50" rx="12" fill="#E65100"/>
+<rect x="800" y="185" width="260" height="20" fill="#E65100"/>
+<text x="930" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🟠 LAYER 3 — CURATION</text>
+<text x="930" y="198" text-anchor="middle" font-size="10" fill="#FFCC80">⚙️ Curation &amp; Decision Engine</text>
+<!-- Tech -->
+<text x="820" y="228" font-size="9" font-weight="bold" fill="#E65100">TECHNICAL COMPONENTS</text>
+<rect x="815" y="236" width="230" height="26" rx="5" fill="white" stroke="#FF9800" stroke-width="1"/><text x="930" y="254" text-anchor="middle" font-size="10" fill="#E65100">🔀 Threshold-Based Filtering</text>
+<rect x="815" y="268" width="230" height="26" rx="5" fill="white" stroke="#FF9800" stroke-width="1"/><text x="930" y="286" text-anchor="middle" font-size="10" fill="#E65100">🔧 Remediation Workflows</text>
+<rect x="815" y="300" width="230" height="26" rx="5" fill="white" stroke="#FF9800" stroke-width="1"/><text x="930" y="318" text-anchor="middle" font-size="10" fill="#E65100">📦 Data Versioning + Audit Log</text>
+<rect x="815" y="332" width="230" height="26" rx="5" fill="white" stroke="#FF9800" stroke-width="1"/><text x="930" y="350" text-anchor="middle" font-size="10" fill="#E65100">🌐 Cross-Jurisdiction Mapping</text>
+<!-- Decision diamond -->
+<polygon points="930,375 960,400 930,425 900,400" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5"/>
+<text x="930" y="404" text-anchor="middle" font-size="9" font-weight="bold" fill="#BF360C">DECIDE</text>
+<!-- Governance -->
+<text x="820" y="450" font-size="9" font-weight="bold" fill="#BF360C">GOVERNANCE CONTROLS</text>
+<rect x="815" y="458" width="230" height="24" rx="5" fill="#FBE9E7" stroke="#FF7043" stroke-width="1" stroke-dasharray="4,2"/><text x="930" y="475" text-anchor="middle" font-size="10" fill="#BF360C">Governance Board Review</text>
+<rect x="815" y="486" width="230" height="24" rx="5" fill="#FBE9E7" stroke="#FF7043" stroke-width="1" stroke-dasharray="4,2"/><text x="930" y="503" text-anchor="middle" font-size="10" fill="#BF360C">Escalation Matrix</text>
+<rect x="815" y="514" width="230" height="24" rx="5" fill="#FBE9E7" stroke="#FF7043" stroke-width="1" stroke-dasharray="4,2"/><text x="930" y="531" text-anchor="middle" font-size="10" fill="#BF360C">Change-Control Process</text>
+<!-- Metrics -->
+<text x="820" y="558" font-size="8" fill="#E65100">📊 Filter Rejection Rate · Remediation SLA</text>
+<text x="820" y="570" font-size="8" fill="#E65100">    Compliance · Audit Completeness Score</text>
+<!-- Arrow L3 → L4 -->
+<line x1="1060" y1="365" x2="1095" y2="365" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="1077" y="356" text-anchor="middle" font-size="9" fill="#555">curated</text>
+<!-- ===== LAYER 4: MONITORING ===== -->
+<rect x="1100" y="155" width="260" height="420" rx="12" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" filter="url(#sh)"/>
+<rect x="1100" y="155" width="260" height="50" rx="12" fill="#2E7D32"/>
+<rect x="1100" y="185" width="260" height="20" fill="#2E7D32"/>
+<text x="1230" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🟢 LAYER 4 — MONITORING</text>
+<text x="1230" y="198" text-anchor="middle" font-size="10" fill="#C8E6C9">🔄 Monitoring &amp; Feedback Loop</text>
+<!-- Tech -->
+<text x="1120" y="228" font-size="9" font-weight="bold" fill="#2E7D32">TECHNICAL COMPONENTS</text>
+<rect x="1115" y="236" width="230" height="26" rx="5" fill="white" stroke="#66BB6A" stroke-width="1"/><text x="1230" y="254" text-anchor="middle" font-size="10" fill="#2E7D32">📈 Drift Detection Engine</text>
+<rect x="1115" y="268" width="230" height="26" rx="5" fill="white" stroke="#66BB6A" stroke-width="1"/><text x="1230" y="286" text-anchor="middle" font-size="10" fill="#2E7D32">🔗 Post-Training Attribution</text>
+<rect x="1115" y="300" width="230" height="26" rx="5" fill="white" stroke="#66BB6A" stroke-width="1"/><text x="1230" y="318" text-anchor="middle" font-size="10" fill="#2E7D32">🚨 Incident Telemetry</text>
+<rect x="1115" y="332" width="230" height="26" rx="5" fill="white" stroke="#66BB6A" stroke-width="1"/><text x="1230" y="350" text-anchor="middle" font-size="10" fill="#2E7D32">🔍 Anomaly Detection (Poison)</text>
+<!-- Governance -->
+<text x="1120" y="378" font-size="9" font-weight="bold" fill="#1B5E20">GOVERNANCE CONTROLS</text>
+<rect x="1115" y="386" width="230" height="24" rx="5" fill="#E8F5E9" stroke="#43A047" stroke-width="1" stroke-dasharray="4,2"/><text x="1230" y="403" text-anchor="middle" font-size="10" fill="#1B5E20">Continuous Governance Dashboard</text>
+<rect x="1115" y="414" width="230" height="24" rx="5" fill="#E8F5E9" stroke="#43A047" stroke-width="1" stroke-dasharray="4,2"/><text x="1230" y="431" text-anchor="middle" font-size="10" fill="#1B5E20">Regulatory Alert System</text>
+<rect x="1115" y="442" width="230" height="24" rx="5" fill="#E8F5E9" stroke="#43A047" stroke-width="1" stroke-dasharray="4,2"/><text x="1230" y="459" text-anchor="middle" font-size="10" fill="#1B5E20">Cross-Sector Incident Reporting</text>
+<!-- Metrics -->
+<text x="1120" y="492" font-size="8" fill="#2E7D32">📊 Composition Drift Score · Time-to-Detect</text>
+<text x="1120" y="504" font-size="8" fill="#2E7D32">    Anomaly · Regulatory Compliance Posture</text>
+<!-- Output arrow -->
+<rect x="1115" y="520" width="230" height="40" rx="8" fill="#A5D6A7" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="1230" y="540" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B5E20">✅ GOVERNED</text>
+<text x="1230" y="554" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B5E20">TRAINING CORPUS</text>
+<!-- ===== FEEDBACK LOOP ARROW (L4 back to L1) ===== -->
+<path d="M 1230 575 L 1230 620 Q 1230 640 1210 640 L 350 640 Q 330 640 330 620 L 330 575" fill="none" stroke="#2E7D32" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr-g)"/>
+<rect x="680" y="628" width="200" height="22" rx="10" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1"/>
+<text x="780" y="644" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">🔄 Continuous Feedback Loop</text>
+<!-- ===== GOVERNANCE SPINE (Bottom Bar) ===== -->
+<rect x="55" y="680" width="1330" height="95" rx="8" fill="#E8EAF6" stroke="#3949AB" stroke-width="1.5" filter="url(#sh)"/>
+<text x="75" y="702" font-size="11" font-weight="bold" fill="#1A237E">🏛️ GOVERNANCE SPINE — Audit, Policy &amp; Compliance Layer</text>
+<!-- Spine items -->
+<rect x="75" y="712" width="190" height="50" rx="6" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+<text x="170" y="732" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Immutable Audit Trail</text>
+<text x="170" y="748" text-anchor="middle" font-size="9" fill="#5C6BC0">Cryptographic provenance</text>
+<text x="170" y="760" text-anchor="middle" font-size="9" fill="#5C6BC0">records across all layers</text>
+
+<rect x="285" y="712" width="190" height="50" rx="6" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+<text x="380" y="732" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Policy-as-Code Engine</text>
+<text x="380" y="748" text-anchor="middle" font-size="9" fill="#5C6BC0">Automated regulatory rule</text>
+<text x="380" y="760" text-anchor="middle" font-size="9" fill="#5C6BC0">enforcement at each gate</text>
+
+<rect x="495" y="712" width="190" height="50" rx="6" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+<text x="590" y="732" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Decision-Support Model</text>
+<text x="590" y="748" text-anchor="middle" font-size="9" fill="#5C6BC0">Risk vs. cost vs. throughput</text>
+<text x="590" y="760" text-anchor="middle" font-size="9" fill="#5C6BC0">trade-off prioritization</text>
+
+<rect x="705" y="712" width="190" height="50" rx="6" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+<text x="800" y="732" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Cross-Jurisdiction Map</text>
+<text x="800" y="748" text-anchor="middle" font-size="9" fill="#5C6BC0">EU AI Act · NIST AI RMF</text>
+<text x="800" y="760" text-anchor="middle" font-size="9" fill="#5C6BC0">US Copyright · Global regs</text>
+
+<rect x="915" y="712" width="190" height="50" rx="6" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+<text x="1010" y="732" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Escalation Framework</text>
+<text x="1010" y="748" text-anchor="middle" font-size="9" fill="#5C6BC0">Exception queues, approval</text>
+<text x="1010" y="760" text-anchor="middle" font-size="9" fill="#5C6BC0">workflows, board review</text>
+
+<rect x="1125" y="712" width="190" height="50" rx="6" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+<text x="1220" y="732" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Compliance Reporting</text>
+<text x="1220" y="748" text-anchor="middle" font-size="9" fill="#5C6BC0">Automated dashboards</text>
+<text x="1220" y="760" text-anchor="middle" font-size="9" fill="#5C6BC0">regulatory evidence packs</text>
+
+<!-- Vertical connectors from layers to spine -->
+<line x1="330" y1="575" x2="330" y2="680" stroke="#3949AB" stroke-width="1" stroke-dasharray="3,3"/>
+<line x1="630" y1="575" x2="630" y2="680" stroke="#3949AB" stroke-width="1" stroke-dasharray="3,3"/>
+<line x1="930" y1="575" x2="930" y2="680" stroke="#3949AB" stroke-width="1" stroke-dasharray="3,3"/>
+<line x1="1230" y1="575" x2="1230" y2="680" stroke="#3949AB" stroke-width="1" stroke-dasharray="3,3"/>
+
+<!-- ===== GAP MAPPING LEGEND ===== -->
+<rect x="55" y="790" width="1330" height="110" rx="8" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1"/>
+<text x="75" y="812" font-size="11" font-weight="bold" fill="#424242">📋 LITERATURE GAP → RDI LAYER MAPPING</text>
+<text x="75" y="835" font-size="9" fill="#616161">Gap 1: Downstream Dominance → Addressed by entire upstream-first architecture (Layers 1–4)</text>
+<text x="75" y="852" font-size="9" fill="#616161">Gap 2: Documentation Without Control → Layer 1 ingestion gates + Layer 3 change-control process</text>
+<text x="75" y="869" font-size="9" fill="#616161">Gap 3: Weak Provenance &amp; Rights → Layer 1 C2PA credentials + License ML + Provenance Ledger</text>
+<text x="720" y="835" font-size="9" fill="#616161">Gap 4: Inadequate Multimodal Metrics → Layer 2 CMDI (novel contribution)</text>
+<text x="720" y="852" font-size="9" fill="#616161">Gap 5: Missing Decision-Support → Governance Spine decision-support model</text>
+<text x="720" y="869" font-size="9" fill="#616161">Gap 6: Limited Enterprise Implementation → Full 4-layer repeatable operating capability</text>
+
+<!-- Footer -->
+<text x="720" y="905" text-anchor="middle" font-size="9" fill="#9E9E9E">RDI Framework v0.1 — Draft Working Paper, March 2026 — Not for Circulation</text>
+</svg>
