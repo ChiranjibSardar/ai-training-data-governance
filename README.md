@@ -32,23 +32,6 @@ The framework organizes governance across **four sequential layers** of the trai
 
 ![Architecture Diagram](assets/governance-framework-diagram.svg)
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│  Cross-Cutting Risk Domains                                      │
-│  Copyright · Bias · Data Poisoning · Multimodal · Privacy · Regs   │
-└─────────────────────────────────────────────────────────────────────┘
-
-  ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
-  │ LAYER 1  │    │ LAYER 2  │    │ LAYER 3  │    │ LAYER 4  │
-  │Ingestion │───▶│Validation│───▶│ Curation │───▶│Monitoring│
-  │Trust Gate│    │Risk Score│    │ Decision │    │ Feedback │
-  └──────────┘    └──────────┘    └──────────┘    └─────┬────┘
-                                                        │
-┌───────────────────────────────────────────────────────────────────┐
-│  Governance Spine: Audit Trail · Policy-as-Code · Decision    │
-│     Support · Cross-Jurisdiction Map · Escalation · Compliance   │
-└───────────────────────────────────────────────────────────────────┘
-```
 
 ### Layer 1: Ingestion (Trust Entry Gate)
 Gatekeeping layer where data first enters the pipeline. Enforces provenance validation, rights classification, and PII detection before any data reaches training infrastructure.
@@ -113,9 +96,9 @@ See the [working paper](paper/) for the full literature review and citation list
 
 ## Related Resources
 
-- 📄 **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft — not for citation)*
-- 📋 **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
-- ✍️ **Article**: [Coming soon on Substack/Medium](#) <!-- TODO: Replace with published URL -->
+- **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft — not for citation)*
+- **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
+- **POC Results**: [Coming soon](#) <!-- TODO: Replace with test results -->
 
 ## Authors
 
