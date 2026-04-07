@@ -140,7 +140,7 @@ If you reference this work, please cite:
 ```bibtex
 @misc{sardar2026rdi,
   title={Upstream by Design: A Framework for Responsible AI Training Data Governance},
-  author={Sardar, Chiranjib and Biswas, Baidyanath},
+  author={Sardar, Chiranjib},
   year={2026},
   note={Working paper, draft v0.1. Available at \url{https://github.com/ChiranjibSardar/ai-training-data-governance}}
 }
