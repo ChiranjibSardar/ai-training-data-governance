@@ -1,7 +1,9 @@
 # Upstream by Design: A Framework for Responsible AI Training Data Governance
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Status: Working Draft](https://img.shields.io/badge/Status-Working%20Draft-orange.svg)]()
+[![Status: POC Complete](https://img.shields.io/badge/Status-POC%20Complete-green.svg)]()
+[![Tests: 67 passed](https://img.shields.io/badge/Tests-67%20passed-brightgreen.svg)]()
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)]()
 
 > **Responsible Data Infrastructure (RDI) Framework** — A design-science framework for embedding governance into AI training data pipelines at the point of ingestion, not after the fact.
 
@@ -17,12 +19,15 @@ This repository hosts the **Responsible Data Infrastructure (RDI) Framework**, a
 
 | Resource | Description |
 |----------|-------------|
+| [`rdi/`](rdi/) | Python package implementing Layers 1 & 2 of the RDI pipeline |
+| [`tests/`](tests/) | 67 unit tests covering all implemented components |
+| [`samples/`](samples/) | Sample text files for demo and testing |
 | [`docs/framework-overview.md`](docs/framework-overview.md) | Full description of the four-layer RDI architecture |
 | [`docs/risk-taxonomy.md`](docs/risk-taxonomy.md) | Taxonomy of upstream risks: copyright, bias, poisoning, privacy, multimodal gaps |
 | [`docs/evaluation-checklist.md`](docs/evaluation-checklist.md) | Practical checklist for evaluating AI training data governance |
-| [`docs/requirements.md`](docs/requirements.md) | Requirements Document for the POC |
-| [`docs/design.md`](docs/design.md) | Design Document for the POC |
-| [`assets/governance-framework-diagram.svg`](assets/governance-framework-diagram.svg) | Architecture diagrams |
+| [`docs/spec/`](docs/spec/) | Requirements, design, and implementation task documents |
+| [`reports/`](reports/) | POC status report (.docx) |
+| [`assets/`](assets/) | Architecture diagrams and visual assets |
 | [`paper/`](paper/) | Working paper draft, not for citation |
 
 
@@ -65,6 +70,105 @@ Continuous post-curation monitoring with a feedback loop back to ingestion — c
 - Incident telemetry and anomaly detection
 - Regulatory alert system
 
+## POC Implementation
+
+The POC implements Layers 1 and 2 as a working Python package (`rdi`), with all components using exclusively open-source models, tools, and public datasets.
+
+### Implemented Components
+
+| Component | Description | Technology |
+|-----------|-------------|------------|
+| PII Scanner | Detects and redacts names, emails, phones, addresses, SSNs | Presidio + spaCy `en_core_web_lg` |
+| Provenance Ledger | Tamper-evident SHA-256 hash-chained append-only audit log | Python `hashlib` |
+| Toxicity Filter | Multi-category scoring (toxic, obscene, threat, insult, identity hate) | Detoxify (`unitary/toxic-bert`) |
+| Deduplicator | Near-duplicate detection via MinHash + Locality-Sensitive Hashing | datasketch |
+| Risk Report | Structured JSON report with risk level assessment | Python dataclasses |
+| Pipeline & CLI | End-to-end orchestration with `rdi run` and `rdi validate-ledger` | click + tqdm |
+
+### Stubbed for Phase 2
+
+| Component | Planned Technology |
+|-----------|-------------------|
+| License Classifier | HuggingFace Transformers (distilbert / bart-large-mnli) |
+| Quality Scorer | GPT-2 perplexity measurement |
+| CMDI Calculator | langdetect + gensim LDA + spaCy NER |
+| C2PA Validator | c2patool CLI wrapper |
+
+### Test Results
+
+- 67 unit tests across 7 test files
+- 100% pass rate
+- Covers: PII detection, hash-chain integrity, toxicity scoring, deduplication clustering, risk report serialization, pipeline orchestration, CLI error handling
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.10+
+- pip
+
+### Installation
+
+```bash
+git clone https://github.com/ChiranjibSardar/ai-training-data-governance.git
+cd ai-training-data-governance
+pip install -e '.[dev]'
+python -m spacy download en_core_web_lg
+```
+
+### Run the Pipeline
+
+```bash
+# Process a directory of text files
+rdi run --input samples/ --output output/
+
+# Process a single file
+rdi run --input document.txt --output results/
+
+# Validate the provenance ledger
+rdi validate-ledger --ledger output/provenance_ledger.jsonl
+```
+
+### Run the Demo
+
+```bash
+./demo.sh
+```
+
+### Use as a Python Library
+
+```python
+from pathlib import Path
+from rdi.pipeline import Pipeline
+from rdi.models import PipelineConfig
+
+pipeline = Pipeline(config=PipelineConfig(toxicity_threshold=0.8))
+report = pipeline.run(Path("your_data/"), Path("output/"))
+print(f"Risk level: {report.risk_level}")
+```
+
+### Use Individual Components
+
+```python
+from rdi.pii_scanner import PIIScanner
+from rdi.toxicity_filter import ToxicityFilter
+from rdi.deduplicator import Deduplicator
+
+scanner = PIIScanner()
+result = scanner.scan("Contact john@example.com for details.")
+print(result.redacted_text)  # "Contact [EMAIL] for details."
+
+toxicity = ToxicityFilter()
+scores = toxicity.score("Some text to analyze")
+print(scores.scores)  # {'toxic': 0.01, 'severe_toxic': 0.0, ...}
+```
+
+### Run Tests
+
+```bash
+python -m pytest tests/ -v
+```
+
 ## Six Gaps This Framework Addresses
 
 The RDI Framework is motivated by six critical gaps identified in the literature:
@@ -98,7 +202,8 @@ See the [working paper](paper/) for the full literature review and citation list
 
 - **Working Paper**: [Upstream by Design: A Framework for Responsible AI Training Data Governance](paper/training-data-governance-framework.pdf) *(draft — not for citation)*
 - **Practical Checklist**: [Evaluating AI Training Data Governance](docs/evaluation-checklist.md)
-- **POC Results**: [Coming soon](#) <!-- TODO: Replace with test results -->
+- **POC Status Report**: [RDI Framework POC Status Report](reports/RDI_Framework_POC_Status_Report.docx)
+- **Spec Documents**: [Requirements](docs/spec/requirements.md) · [Design](docs/spec/design.md) · [Tasks](docs/spec/tasks.md)
 
 ## Authors
 
